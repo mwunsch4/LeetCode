@@ -29,7 +29,6 @@ public class AddDigits {
 		Random r = new Random();
 		int num = r.nextInt(1000);
 		System.out.println("Input: " + num);
-		Integer number = new Integer(num);
 		System.out.println("Quick Output: " + quickAddDigits(num));
 		System.out.println("Output: " + addDigits(num));
 
