@@ -1,5 +1,6 @@
 package Algorithms;
 
+//Solution to LeetCode problem 226
 public class InvertBinaryTree {
 	
 	//The following method inverts a binary tree
