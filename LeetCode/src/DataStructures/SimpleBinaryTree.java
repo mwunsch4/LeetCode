@@ -111,6 +111,22 @@ public class SimpleBinaryTree {
         }
     }
 	
+	//Given a binary tree and a sum, determine if the tree has a root-to-leaf 
+	//path such that adding up all the values along the path equals the given sum.
+	public static boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        if (root.left == null && root.right == null) {
+           if (sum == root.value) {
+                return true;
+            } else {
+                return false;
+            } 
+        }
+        return hasPathSum(root.right, sum - root.value) || hasPathSum(root.left, sum - root.value);
+    }
+	
 	public static void main(String[] args) {
 		int[] tree = {3,1,4,-1,2};
 		SimpleBinaryTree bt = new SimpleBinaryTree(tree);
